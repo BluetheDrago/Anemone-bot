@@ -1,28 +1,29 @@
 # Evidence — Server Members intent application
 
 Screenshots for the privileged-intent review of **Anemone** (application ID 1513739696599990293).
-This folder is the public, non-expiring host the form's evidence links point at. Every image is a capture of
-the running product or of Discord's own developer portal — no mockups, no rendered diagrams.
+Every image is a capture of the running bot in a real server. This folder is the public, non-expiring host the
+form's evidence links point at.
 
-The rule for the set: show the bot **doing the job**, not a list of what it could do. A reviewer has to see the
-member walk, the thresholds it acts on, the role arriving on a real member, and the commands as people use them.
+## The five images
 
-## The shots
+| file | where it was taken | what it shows | weight |
+|---|---|---|---|
+| `01-syncmigrate-walk.png` | bot testing server (4 members) | `/syncmigrate` run by Obelix; Anemone replies **Level Re-Sync Complete — Scanned 2, Updated 1, No matching role 1, Role mappings used 4, Skipped (bots) 2** | ⚠ weak: a 2-member scan does not demonstrate the member-list need. Re-take in AI Sponge: Rehydrated (24,254 members, 26 mappings) |
+| `02-levelrole-list.png` | bot testing server (4 members) | `/levelrole list` — 4 mappings: Level 5/10/15/20 → @Level 5/10/15/20 | ⚠ same: shows 4 rows, not the 26 configured in AI Sponge |
+| `03-levelup-announcements.png` | ♡ gensokyo afterhours | a day of level-up posts: **Congratulations {member}! You reached Level N!** — members at levels 1-24 | partial: proves level-ups are flowing, but shows no role arriving, and the bot appears under that server's nickname "Judgement Bot" (same application — username is Anemone) |
+| `04-commands-in-action.png` | — | `/level` rendering a rank card (Level 20, Rank #1, 20,509 total XP) and `/customize` opening the card-customisation panel | strong: the member-facing surface in use |
+| `05-audit-log-role-changes.png` | AI Sponge: Rehydrated | Audit Log filtered to **Anemone**: 11 "updated roles for <member>" entries with dates | strong: the bot's role work as the server itself records it |
 
-| file | what it must show | why it earns its place |
-|---|---|---|
-| `01-syncmigrate-walk.png` | `/syncmigrate` in AI Sponge: Rehydrated, mid-run or finished, with the member count it walked and the roles it changed | the only code path that iterates the guild member list (`guild.members`, `cogs/roles.py:330`) — the entire justification for the intent |
-| `02-levelrole-list.png` | `/levelrole list` in the same server: the level-to-role thresholds actually configured | the mapping the walk acts on, in the server where it acts |
-| `03-role-landing.png` | a member's level-up post and the reward role arriving on them, before/after visible in the member panel | the product working end to end for a real person |
-| `04-commands-in-action.png` | a real channel with the bot answering several commands in a row — `/level` returning a rank card, `/leaderboard`, `/customize` — exactly as members see them | replaces the abstract "38 commands registered" list with the surface in use |
-| `05-audit-log-role-changes.png` | Server Settings → Audit Log, filtered to **Anemone**, showing role add/remove entries with the reason it wrote — `Reached level 25`, `Reached level 50` etc. | the bot's role work as the server itself records it: real members, real timestamps, the reason string the code passes (`admin.py:1849`, `roles.py:270`) |
+## Before submitting
 
-Optional sixth, only if it is easy: `/resync` restoring a rejoined member's roles from their stored level.
+1. Re-take `01` in **AI Sponge: Rehydrated** and let it finish, so the reply reports a scan in the thousands.
+2. Re-take `02` in the same server so it lists the 26 AI Sponge mappings.
+3. `03` is acceptable as "the leveling product works", but the decisive role evidence is `05`. If a member
+   panel showing stacked threshold roles is easy to capture, that is the stronger version.
 
 ## Rules for the links
 
 - Public URL, no sign-in, no expiry. Discord CDN links (`cdn.discordapp.com`, `?ex=` parameters) are not
   acceptable — they expire and the reviewer gets a 404 weeks later.
-- One link per shot, pasted into the form's evidence field.
+- One link per image, pasted into the form's evidence field.
 - Each link opened once while signed out, before submitting.
-- Filenames `NN-what-it-shows.png`: lowercase, hyphens, no underscores.
