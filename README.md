@@ -63,5 +63,5 @@ Discord's own CDN, for avatars and custom emoji images at render time; those are
 cache and never written to disk.
 
 Members and server administrators can request a copy or deletion of their data with `/contact`, or by email to
-**Dragohomestudios@gmail.com** — the operator's public mailing address. The full policy is in
+**dragonwantsmoney@gmail.com** — the operator's public mailing address. The full policy is in
 [privacy-policy.md](privacy-policy.md).
