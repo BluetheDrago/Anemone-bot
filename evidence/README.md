@@ -15,7 +15,7 @@ member walk, the thresholds it acts on, the role arriving on a real member, and 
 | `02-levelrole-list.png` | `/levelrole list` in the same server: the level-to-role thresholds actually configured | the mapping the walk acts on, in the server where it acts |
 | `03-role-landing.png` | a member's level-up post and the reward role arriving on them, before/after visible in the member panel | the product working end to end for a real person |
 | `04-commands-in-action.png` | a real channel with the bot answering several commands in a row — `/level` returning a rank card, `/leaderboard`, `/customize` — exactly as members see them | replaces the abstract "38 commands registered" list with the surface in use |
-| `05-portal-permissions.png` | Dev Portal → the app's Bot tab: the privileged intent toggles **and** the bot's granted permissions (Manage Roles) in the same page | the practical half of the portal: not just which intent, but what the bot is permitted to do with the member list |
+| `05-audit-log-role-changes.png` | Server Settings → Audit Log, filtered to **Anemone**, showing role add/remove entries with the reason it wrote — `Reached level 25`, `Reached level 50` etc. | the bot's role work as the server itself records it: real members, real timestamps, the reason string the code passes (`admin.py:1849`, `roles.py:270`) |
 
 Optional sixth, only if it is easy: `/resync` restoring a rejoined member's roles from their stored level.
 
