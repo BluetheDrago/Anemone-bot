@@ -1,6 +1,6 @@
 # Anemone — Privacy Policy
 
-_Last updated: 17 October 2026_
+_Last updated: 10 November 2026_
 
 Anemone is a community leveling bot for Discord: it awards XP and levels for participation, grants reward
 roles at configured level thresholds, and lets members customise a rank card.
@@ -62,10 +62,12 @@ law requires it). Anemone does not knowingly hold data for anyone below that age
 
 ## Contact
 
-Deletion requests, data questions, and reports of any issue or violation relating to Anemone — contact the
-bot owner on Discord:
+Deletion requests, data questions, and reports of any issue or violation relating to Anemone can be sent by
+email to the operator's public mailing address:
 
-**obelix.gaming** (the Discord account that operates Anemone)
+**Dragohomestudios@gmail.com**
+
+You can also reach the bot owner on Discord: **obelix.gaming** (the account that operates Anemone).
 
 ## Changes
 
